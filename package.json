@@ -2,7 +2,7 @@
   "name": "env-helper",
   "version": "1.0.0",
   "description": "This is the utility module for node js to generate .sample.env file for the projects.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
