@@ -1,0 +1,25 @@
+{
+  "name": "env-helper",
+  "version": "1.0.0",
+  "description": "This is the utility module for node js to generate .sample.env file for the projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mentormaya/env-helper.git"
+  },
+  "keywords": [
+    "generator",
+    "env",
+    "dot-env",
+    "sample-env"
+  ],
+  "author": "Ajay Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mentormaya/env-helper/issues"
+  },
+  "homepage": "https://github.com/mentormaya/env-helper#readme"
+}
