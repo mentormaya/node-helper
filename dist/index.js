@@ -1,2 +1,0 @@
-#!/usr/bin/env node
-"use strict";var o=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var i=Object.getOwnPropertyNames;var l=Object.prototype.hasOwnProperty;var u=(e,n)=>{for(var t in n)o(e,t,{get:n[t],enumerable:!0})},b=(e,n,t,s)=>{if(n&&typeof n=="object"||typeof n=="function")for(let r of i(n))!l.call(e,r)&&r!==t&&o(e,r,{get:()=>n[r],enumerable:!(s=g(n,r))||s.enumerable});return e};var c=e=>b(o({},"__esModule",{value:!0}),e);var p={};u(p,{greet:()=>d});module.exports=c(p);var d=e=>`Hello ${e}`;0&&(module.exports={greet});
