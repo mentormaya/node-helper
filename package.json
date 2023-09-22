@@ -24,6 +24,9 @@
     "sample-env"
   ],
   "author": "Ajay Singh",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mentormaya/env-helper/issues"
