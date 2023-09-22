@@ -2,7 +2,9 @@
   "name": "env-helper",
   "version": "0.0.1",
   "description": "This is the utility module for node js to generate .sample.env file for the projects.",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/mentormaya/env-helper#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/node": "^20.6.3",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
