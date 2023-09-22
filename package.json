@@ -4,7 +4,10 @@
   "description": "This is the utility module for node js to generate .sample.env file for the projects.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "dev": "vitest",
+    "test": "vitest run",
+    "build": "tsup src/index.ts --format esm,cjs,iife --minify",
+    "lint": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,7 +26,10 @@
   },
   "homepage": "https://github.com/mentormaya/env-helper#readme",
   "devDependencies": {
-    "typescript": "^5.2.2"
+    "@types/node": "^20.6.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.5"
   },
   "dependencies": {
     "chalk": "^5.3.0",
