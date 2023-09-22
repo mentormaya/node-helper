@@ -8,5 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ajay Singh",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@mentormaya/helper": "^0.1.0"
+  }
 }
