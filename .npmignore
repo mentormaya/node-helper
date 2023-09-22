@@ -1,6 +1,6 @@
-.changeset
-.github
-src
-tsconfig.json
-vite.config.ts
-example
+*
+!package.json
+!dist/**/*
+!CHANGELOG.md
+!README.md
+!LICENSE
