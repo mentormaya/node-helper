@@ -1,0 +1,11 @@
+{
+  "name": "env-helper-example",
+  "version": "1.0.0",
+  "description": "this is the test app for the env-helper library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

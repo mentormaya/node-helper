@@ -2,7 +2,7 @@
   "name": "env-helper",
   "version": "1.0.0",
   "description": "This is the utility module for node js to generate .sample.env file for the projects.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest"
   },
@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/mentormaya/env-helper/issues"
   },
-  "homepage": "https://github.com/mentormaya/env-helper#readme"
+  "homepage": "https://github.com/mentormaya/env-helper#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-spinner": "^0.2.10",
+    "yargs-interactive": "^3.0.1"
+  }
 }
