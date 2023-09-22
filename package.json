@@ -5,7 +5,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "bin": "./dist/index.js",
+  "bin": {
+    "helper": "./dist/index.js"
+  },
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
