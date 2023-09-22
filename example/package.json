@@ -1,11 +1,12 @@
 {
-  "name": "env-helper-example",
+  "name": "node-helper-example",
   "version": "1.0.0",
-  "description": "this is the test app for the env-helper library",
+  "description": "this is the test project for the library",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Ajay Singh",
+  "license": "MIT"
 }

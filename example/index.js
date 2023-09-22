@@ -1,3 +1,3 @@
-import { greet } from "env-helper";
+import { greet } from "@mentormaya/helper";
 
-console.log(greet("ajay"));
+console.log(greet(`Ajay!`));
