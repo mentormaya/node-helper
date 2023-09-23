@@ -1,0 +1,2 @@
+import l from"fs";import r from"path";var i=n=>{let e=n.split(`
+`);console.log(e)},c=(n,e)=>{try{let o=r.join(process.cwd(),n!=null?n:".env");console.log(`reading sample env(${n})`);let s=l.readFileSync(o,{encoding:"utf8",flag:"r"});return i(s)}catch(o){return console.log("No .env file Found!"),!1}},g=n=>{console.log(n)},v=({name:n,sample:e,values:o,silent:s})=>{s||console.log("prompting here:");let t=c(n,e);t&&(g(t),console.log("Sample ENV file written successfully!"))};export{v as a};

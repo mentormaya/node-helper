@@ -1,0 +1,2 @@
+"use strict";var t=Object.defineProperty;var c=Object.getOwnPropertyDescriptor;var r=Object.getOwnPropertyNames;var s=Object.prototype.hasOwnProperty;var A=(R,E)=>{for(var o in E)t(R,o,{get:E[o],enumerable:!0})},I=(R,E,o,N)=>{if(E&&typeof E=="object"||typeof E=="function")for(let n of r(E))!s.call(R,n)&&n!==o&&t(R,n,{get:()=>E[n],enumerable:!(N=c(E,n))||N.enumerable});return R};var _=R=>I(t({},"__esModule",{value:!0}),R);var x={};A(x,{CARRIAGE_RETURN:()=>e,NEW_LINE:()=>p});module.exports=_(x);var e="\r",p=`
+`;0&&(module.exports={CARRIAGE_RETURN,NEW_LINE});

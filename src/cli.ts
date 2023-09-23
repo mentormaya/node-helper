@@ -16,12 +16,19 @@ program.name("helper").description(banner).version(packageJson.version);
 program
   .command("gen-env")
   .description("Generate Sample ENV(.env.sample) from .env file.")
-  .option("-n, --name <name>", "Name for the sample env file", ".env.sample")
+  .option("-s, --silent", "runs without any interaction.", false)
+  .option("-n, --name <name>", "Name of env file", ".env")
+  .option(
+    "-N, --sample <sample_name>",
+    "Name for the sample env file",
+    ".env.sample"
+  )
   .option(
     "-v, --values <placeholder>",
     "Default Placeholder Value",
     "YOUR_FIELD_VALUE"
   )
+  .option("-d, --dry-run", "Output to the console only", false)
   .action(genEnv);
 
 program.parse();

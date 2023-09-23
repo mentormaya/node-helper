@@ -1,0 +1,1 @@
+var l=()=>{console.log("reading sample env")},s=n=>{console.log(n)},g=({name:n,values:t,silent:e})=>{e||console.log("prompting here:");let o=l();s(o),console.log("Sample ENV file written successfully!")};export{g as a};
