@@ -5,15 +5,12 @@ import { Command } from "commander";
 import * as packageJson from "../package.json";
 import { genEnv } from "./gen-env";
 
+import banner from "./banner";
+
 const program = new Command();
 
 // creating tool
-program
-  .name("Sample ENV Generator (.env.sample)")
-  .description(
-    "A CLI tool for generating a sample env(.env.sample) file from a .env file"
-  )
-  .version(packageJson.version);
+program.name("helper").description(banner).version(packageJson.version);
 
 // adding command
 program
