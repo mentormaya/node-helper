@@ -1,2 +1,1 @@
-#!/usr/bin/env node
-"use strict";(()=>{var n=e=>`Hello ${e}`;console.log(n("Ajay"));})();
+"use strict";(()=>{var r=e=>`Hello ${e}`;})();

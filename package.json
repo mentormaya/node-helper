@@ -6,12 +6,12 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
-    "helper": "./dist/index.js"
+    "helper": "./dist/cli.js"
   },
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
-    "build": "tsup src/index.ts --format esm,cjs,iife --minify",
+    "build": "tsup src/**/* --format esm,cjs,iife --minify",
     "lint": "tsc",
     "ci": "npm run lint && npm run test && npm run build",
     "release": "npm run lint && npm run test && npm run build && changeset publish"
@@ -32,7 +32,8 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mentormaya/env-helper/issues"
+    "url": "https://github.com/mentormaya/env-helper/issues",
+    "email": "admin@ajaysingh.com.np"
   },
   "homepage": "https://github.com/mentormaya/env-helper#readme",
   "devDependencies": {
@@ -45,6 +46,7 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "cli-spinner": "^0.2.10",
-    "yargs-interactive": "^3.0.1"
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.11"
   }
 }

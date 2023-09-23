@@ -1,2 +1,1 @@
-#!/usr/bin/env node
-var n=e=>`Hello ${e}`;console.log(n("Ajay"));export{n as greet};
+import{a}from"./chunk-EJL3LJVV.mjs";export{a as greet};
