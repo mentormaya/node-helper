@@ -1,16 +1,16 @@
 # NODE HELPER
 
-This is the `helper` utility tool for the projects for developer. This tool is aimed to help `developers` with many small things like setup, generate boilerplate code, generating sample.env file and many more.
+This is the `helper` utility tool for the projects for developer. This tool is aimed to help `developers` 🧑‍💻 with many small things like setup, generate boilerplate code, generating sample.env file and many more.
 
 **NODE HELPER** helps with ....
 
-- [x] sample.env file generator
-- [ ] boilerplate code generator
-  - [ ] Static Website
-  - [ ] Next.js
-  - [ ] React App
-- [ ] init ESLint
-- [ ] init test with jest
+- [x] sample.env file generator 🗂️
+- [ ] boilerplate code generator 🗂
+  - [ ] Static Website 🌍
+  - [ ] Next.js 🌍
+  - [ ] React App 🌍
+- [ ] init ESLint 🖥️
+- [ ] init test with jest 🧪
 
 ## Installation
 
