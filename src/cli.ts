@@ -37,5 +37,5 @@ program.exitOverride();
 try {
   program.parse();
 } catch (err: any) {
-  console.log(err);
+  program.helpInformation();
 }
