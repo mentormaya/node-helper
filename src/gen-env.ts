@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
-
-const inquirer = require("inquirer");
+import inquirer from "inquirer";
 
 import { CARRIAGE_RETURN, NEW_LINE, VALUE_TEMPLATE_CHOICES } from "./constants";
 
@@ -16,7 +15,7 @@ interface optionProps {
 const safeValue = (env: string, values: string): string => {
   const [variable, value] = env.split("=");
   if (values === VALUE_TEMPLATE_CHOICES[0]) {
-    return `${variable}="YOUR_${variable}_VALUE"`;
+    return `${variable}="YOUR_${variable.toUpperCase()}_VALUE"`;
   }
   return "";
 };
