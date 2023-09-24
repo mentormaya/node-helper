@@ -3,7 +3,7 @@ import path from "path";
 
 const inquirer = require("inquirer");
 
-import { CARRIAGE_RETURN, NEW_LINE } from "./constants";
+import { CARRIAGE_RETURN, NEW_LINE, VALUE_TEMPLATE_CHOICES } from "./constants";
 
 interface optionProps {
   name: string;
@@ -15,7 +15,7 @@ interface optionProps {
 
 const safeValue = (env: string, values: string): string => {
   const [variable, value] = env.split("=");
-  if (values === "YOUR_FIELD_VALUE") {
+  if (values === VALUE_TEMPLATE_CHOICES[0]) {
     return `${variable}="YOUR_${variable}_VALUE"`;
   }
   return "";
@@ -96,10 +96,10 @@ export const genEnv = ({
           default: ".sample.env",
         },
         {
-          type: "input",
+          type: "list",
           name: "values",
           message: "Placeholder format for your values?",
-          default: "YOUR_FIELD_VALUE",
+          choices: VALUE_TEMPLATE_CHOICES,
         },
         {
           type: "confirm",
@@ -109,7 +109,7 @@ export const genEnv = ({
           default: false,
         },
       ])
-      .then((answers: Omit<optionProps, "silent">) => {
+      .then(({ name, sample, values, dryRun }: Omit<optionProps, "silent">) => {
         runCommand({ name, sample, values, dryRun });
       })
       .catch((error: any) => {

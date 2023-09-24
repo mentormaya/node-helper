@@ -6,6 +6,7 @@ import * as packageJson from "../package.json";
 import { genEnv } from "./gen-env";
 
 import banner from "./banner";
+import { VALUE_TEMPLATE_CHOICES } from "./constants";
 
 const program = new Command();
 
@@ -26,7 +27,7 @@ program
   .option(
     "-v, --values <placeholder>",
     "Default Placeholder Value",
-    "YOUR_FIELD_VALUE"
+    VALUE_TEMPLATE_CHOICES[0]
   )
   .option("-d, --dry-run", "Output to the console only", false)
   .action(genEnv);
