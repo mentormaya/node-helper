@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { Command } from "commander";
+import { Command } from "@commander-js/extra-typings";
 
 import * as packageJson from "../package.json";
 import { genEnv } from "./gen-env";
@@ -32,4 +32,10 @@ program
   .option("-d, --dry-run", "Output to the console only", false)
   .action(genEnv);
 
-program.parse();
+program.exitOverride();
+
+try {
+  program.parse();
+} catch (err: any) {
+  console.log(err);
+}
