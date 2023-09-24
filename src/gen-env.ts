@@ -5,7 +5,7 @@ import { CARRIAGE_RETURN, NEW_LINE } from "./constants";
 const safeValue = (env: string, values: string): string => {
   const [variable, value] = env.split("=");
   if (values === "YOUR_FIELD_VALUE") {
-    return `${variable}=YOUR_${variable}_VALUE`;
+    return `${variable}="YOUR_${variable}_VALUE"`;
   }
   return "";
 };
