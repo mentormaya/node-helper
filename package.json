@@ -38,6 +38,7 @@
   "homepage": "https://github.com/mentormaya/env-helper#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
+    "@types/inquirer": "^9.0.3",
     "@types/node": "^20.6.3",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
@@ -48,6 +49,6 @@
     "cli-spinner": "^0.2.10",
     "commander": "^11.0.0",
     "figlet": "^1.6.0",
-    "inquirer": "^9.2.11"
+    "inquirer": "^8.0.0"
   }
 }

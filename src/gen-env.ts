@@ -1,6 +1,17 @@
 import fs from "fs";
 import path from "path";
+
+const inquirer = require("inquirer");
+
 import { CARRIAGE_RETURN, NEW_LINE } from "./constants";
+
+interface optionProps {
+  name: string;
+  sample: string;
+  values: string;
+  silent: boolean;
+  dryRun: boolean;
+}
 
 const safeValue = (env: string, values: string): string => {
   const [variable, value] = env.split("=");
@@ -50,24 +61,64 @@ const writtingSampleEnv = (env: string, sample: string) => {
   }
 };
 
+const runCommand = ({
+  name,
+  sample,
+  values,
+  dryRun,
+}: Omit<optionProps, "silent">) => {
+  const envs = getEnv(name, sample, values);
+  if (!envs) return;
+  dryRun ? console.log(envs) : writtingSampleEnv(envs, sample);
+  !dryRun && console.log("Sample ENV file written successfully!");
+};
+
 export const genEnv = ({
   name,
   sample,
   values,
   silent,
   dryRun,
-}: {
-  name: string;
-  sample: string;
-  values: string;
-  silent: boolean;
-  dryRun: boolean;
-}) => {
+}: optionProps) => {
   if (!silent) {
-    console.log("prompting here:");
-  }
-  const envs = getEnv(name, sample, values);
-  if (!envs) return;
-  dryRun ? console.log(envs) : writtingSampleEnv(envs, sample);
-  !dryRun && console.log("Sample ENV file written successfully!");
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "name",
+          message: "What is the name of your env file?",
+          default: ".env",
+        },
+        {
+          type: "input",
+          name: "sample",
+          message: "What do you want your sample env file name to be?",
+          default: ".sample.env",
+        },
+        {
+          type: "input",
+          name: "values",
+          message: "Placeholder format for your values?",
+          default: "YOUR_FIELD_VALUE",
+        },
+        {
+          type: "confirm",
+          name: "dryRun",
+          message:
+            "Want the output in the console instead of generating a file?",
+          default: false,
+        },
+      ])
+      .then((answers: Omit<optionProps, "silent">) => {
+        runCommand({ name, sample, values, dryRun });
+      })
+      .catch((error: any) => {
+        if (error.isTtyError) {
+          console.log(`Couldnot render prompt under this environment!`);
+          console.log(error);
+        } else {
+          console.log(`Something went Wrong: ${error}`);
+        }
+      });
+  } else runCommand({ name, sample, values, dryRun });
 };
