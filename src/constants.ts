@@ -1,6 +1,3 @@
-const CARRIAGE_RETURN = "\r";
-const NEW_LINE = "\n";
-
-const VALUE_TEMPLATE_CHOICES = ["YOUR_FIELD_VALUE"];
-
-export { CARRIAGE_RETURN, NEW_LINE, VALUE_TEMPLATE_CHOICES };
+export const CARRIAGE_RETURN = "\r";
+export const NEW_LINE = "\n";
+export const VALUE_TEMPLATE_CHOICES = ["YOUR_FIELD_VALUE"];

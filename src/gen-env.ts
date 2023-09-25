@@ -21,7 +21,12 @@ const safeValue = (env: string, values: string): string => {
 };
 
 const parseEnv = (envFile: string, values: string): string => {
-  let envs = envFile.split(`${CARRIAGE_RETURN}${NEW_LINE}`);
+  var envs = [""];
+  if (envFile.includes(`${CARRIAGE_RETURN}${NEW_LINE}`)) {
+    envs = envFile.split(`${CARRIAGE_RETURN}${NEW_LINE}`);
+  } else {
+    envs = envFile.split(`${NEW_LINE}`);
+  }
   return envs
     .map((line) => {
       if (line.trim() === "") return line;
