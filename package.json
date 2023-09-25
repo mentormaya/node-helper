@@ -1,6 +1,6 @@
 {
   "name": "@mentormaya/helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is the utility module for node js to generate .sample.env file for the projects.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -1,5 +1,13 @@
 # env-helper
 
+## 1.0.1
+
+### Patch Changes
+
+- fd87dcd: # First Issue for not including some values from the .env file is fixed
+
+  The issue was due to absence of `\r` character on `Mac`.
+
 ## 1.0.0
 
 ### Major Changes
