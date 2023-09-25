@@ -2,3 +2,4 @@ node_modules
 test/node_modules
 .env
 .env.sample
+.env_old
